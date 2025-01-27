@@ -7,13 +7,13 @@ const Card = ({data}:CardPorps) => {
     
     return ( 
 
-        <div className="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg mb-4">
+        <div className="flex w-full overflow-hidden bg-white rounded-lg shadow-lg mb-4">
             <div className="w-1/3 ">
-                <img className=" object-cover h-full "  src={"https://picsum.photos/200/300?random=" + data.id } alt="" />
+                <img className=" object-cover h-60 "  src={"https://picsum.photos/200/300?random=" + data.id } alt="" />
                 {/* <img src="images/logo-dark.png" alt="" /> */}
 
             </div>
-            <div className="w-2/3 p-4">
+            <div className="w-full p-4">
                 <h1 className="text-xl font-bold text-gray-900">
                     {data.service_name}
                 </h1>

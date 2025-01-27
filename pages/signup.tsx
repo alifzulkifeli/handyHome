@@ -78,7 +78,7 @@ export default function SignUp() {
             </header>
         </div>
             <Section>
-                <Card className="m-4 mt-40" >
+                <Card className="m-4 mt-40  max-w-screen-md mx-auto" >
                     <CardHeader>
                         <CardTitle>Sign Up</CardTitle>
                         <CardDescription>Enter your email and password to create an account. </CardDescription>

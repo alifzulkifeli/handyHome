@@ -198,70 +198,70 @@ export default function ChatDetails() {
             <Page padding={0} nav={false} fromChat={true} >
                 <Section>
                     {user && otherUserData ?
-                    <div className="flex flex-col bg-background">
-                    <ScrollArea className="flex-grow p-3 min-h-[80vh]" ref={scrollAreaRef}>
-                        <div className="mx-auto">
-                            {messages.map((message, index) => (
-                                <div
-                                    key={index}
-                                    className={`flex ${message.senderId === userId ? 'justify-end' : 'justify-start'} mb-2`}
-                                    ref={index === messages.length - 1 ? lastMessageRef : null}
-                                >
-                                    <div
-                                        className={`flex items-start max-w-[80%] ${message.senderId === userId ? 'flex-row-reverse' : 'flex-row'}`}
-                                    >
-                                        <Avatar className="w-8 h-8">
-                                            <AvatarFallback>
-                                                {message.senderId === userId ?
-                                                    'U'
-                                                    : 'R'}
-                                            </AvatarFallback>
-                                            <AvatarImage
-                                                src={
-                                                    message.senderId === userId
-                                                        ? `https://pb.alifz.xyz/api/files/_pb_users_auth_/${user.id}/${user.avatar}`
-                                                        : `https://pb.alifz.xyz/api/files/${otherUserData.collectionId}/${otherUserData.id}/${otherUserData.avatar}`
-                                                }
-                                            />
-                                        </Avatar>
+                        <div className="flex flex-col bg-background">
+                            <ScrollArea className="flex-grow p-3 min-h-[80vh]" ref={scrollAreaRef}>
+                                <div className="mx-auto">
+                                    {messages.map((message, index) => (
                                         <div
-                                            className={`mx-2 p-2 rounded-lg ${message.senderId === userId
-                                                ? 'bg-primary text-primary-foreground'
-                                                : 'bg-secondary text-secondary-foreground'
-                                                }`}
+                                            key={index}
+                                            className={`flex ${message.senderId === userId ? 'justify-end' : 'justify-start'} mb-2`}
+                                            ref={index === messages.length - 1 ? lastMessageRef : null}
                                         >
-                                            {message.message_text}
+                                            <div
+                                                className={`flex items-start max-w-[80%] ${message.senderId === userId ? 'flex-row-reverse' : 'flex-row'}`}
+                                            >
+                                                <Avatar className="w-8 h-8">
+                                                    <AvatarFallback>
+                                                        {message.senderId === userId ?
+                                                            'U'
+                                                            : 'R'}
+                                                    </AvatarFallback>
+                                                    <AvatarImage
+                                                        src={
+                                                            message.senderId === userId
+                                                                ? `https://pb.alifz.xyz/api/files/_pb_users_auth_/${user.id}/${user.avatar}`
+                                                                : `https://pb.alifz.xyz/api/files/${otherUserData.collectionId}/${otherUserData.id}/${otherUserData.avatar}`
+                                                        }
+                                                    />
+                                                </Avatar>
+                                                <div
+                                                    className={`mx-2 p-2 rounded-lg ${message.senderId === userId
+                                                        ? 'bg-primary text-primary-foreground'
+                                                        : 'bg-secondary text-secondary-foreground'
+                                                        }`}
+                                                >
+                                                    {message.message_text}
+                                                </div>
+                                            </div>
                                         </div>
+                                    ))}
+                                </div>
+                            </ScrollArea>
+                            <footer className="p-4 bg-white z-10 sticky bottom-0 left-0 border-t w-full opacity-100 p-4">
+                                <div className="max-w-2xl mx-auto">
+                                    <div
+
+                                        className="flex space-x-2"
+                                    >
+                                        <Input
+                                            type="text"
+                                            placeholder="Type your message..."
+                                            value={newMessage}
+                                            onChange={(e) => setNewMessage(e.target.value)}
+                                            className="flex-grow  bg-white "
+                                        />
+                                        <Button type="submit" size="icon" onMouseDown={(e) => {
+                                            e.preventDefault()
+                                            handleSendMessage()
+                                        }} >
+                                            <Send className="h-4 w-4" />
+                                            <span className="sr-only">Send</span>
+                                        </Button>
                                     </div>
                                 </div>
-                            ))}
+                            </footer>
                         </div>
-                    </ScrollArea>
-                    <footer className="p-4 bg-white z-10 sticky bottom-0 left-0 border-t w-full opacity-100 p-4">
-                        <div className="max-w-2xl mx-auto">
-                            <div
-
-                                className="flex space-x-2"
-                            >
-                                <Input
-                                    type="text"
-                                    placeholder="Type your message..."
-                                    value={newMessage}
-                                    onChange={(e) => setNewMessage(e.target.value)}
-                                    className="flex-grow  bg-white "
-                                />
-                                <Button type="submit" size="icon" onMouseDown={(e) => {
-                                    e.preventDefault()
-                                    handleSendMessage()
-                                }} >
-                                    <Send className="h-4 w-4" />
-                                    <span className="sr-only">Send</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-                : <BackHome /> }
+                        : <BackHome />}
                 </Section>
             </Page>
         </div>

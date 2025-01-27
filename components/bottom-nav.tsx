@@ -5,7 +5,7 @@ const BottomNav = () => {
 	const router = useRouter()
 
 	return (
-		<div className='sm:hidden'>
+		<div className=''>
 			<nav className='fixed bottom-0 w-full border-t bg-zinc-100 pb-safe dark:border-zinc-800 dark:bg-zinc-900'>
 				<div className='mx-auto flex h-14 max-w-md items-center justify-around px-6'>
 					{links.map(({ href, label, icon }) => (

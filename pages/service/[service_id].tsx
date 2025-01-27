@@ -140,7 +140,7 @@ const ServiceDetails = () => {
 		<Page padding={0} nav={false}>
 			<Section>
 				{service && provider ?
-					<div className="p-2">
+					<div className="p-2 pb-20">
 
 
 						<Card className="">
@@ -252,8 +252,8 @@ const ServiceDetails = () => {
 					</div>
 					: null}
 
-			</Section>
 			{provider ? <BottomNavService serviceroviderID={provider!.id} serviceId={serviceId} /> : null}
+			</Section>
 
 		</Page>
 	);

@@ -117,7 +117,7 @@ export default function Order() {
      <Page padding={0} >
       <Section >
         {user && orders.length  > 0 ? (
-          <div className="h-full bg-background  text-foreground w-full">
+          <div className="h-full bg-background pb-20 text-foreground w-full">
           <ScrollArea className="h-full ">
             <div className="p-5  space-y-3">
               {orders.map((order, index) => (

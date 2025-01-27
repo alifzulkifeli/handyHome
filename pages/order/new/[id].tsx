@@ -185,7 +185,7 @@ export default function ChatDetails() {
         <Page padding={0} nav={false}>
             <Section>
                 {!loading ?
-                    <div className="p-2">
+                    <div className="p-2 pb-20">
 
 
                         <Card className="">
@@ -329,7 +329,7 @@ export default function ChatDetails() {
 
             {selectedDate && selectedTime && address.Adress1 && address.Adress2 ?
             <div className=''>
-                <nav className='fixed bottom-0 w-full border-t bg-zinc-100  dark:border-zinc-800 dark:bg-zinc-900'>
+                <nav className='fixed bottom-0 w-full  max-w-screen-md  border-t bg-zinc-100  dark:border-zinc-800 dark:bg-zinc-900'>
                     <div className=' flex h-16  items-center justify-around'>
 
                         <div

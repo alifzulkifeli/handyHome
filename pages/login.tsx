@@ -49,7 +49,7 @@ export default function LoginForm() {
 
     return (
         <div  >
-              <div className='fixed top-0 left-0 z-20 w-full bg-zinc-900 pt-safe'>
+              <div className='fixed top-0 left-0 z-20  w-full bg-zinc-900 pt-safe'>
             <header className='border-b bg-zinc-100 px-safe dark:border-zinc-800 dark:bg-zinc-900'>
                 <div className='mx-auto flex h-16 max-w-screen-md items-center justify-between px-6'>
                         <button onClick={() => router.back()} className='text-blue-600'>
@@ -59,7 +59,7 @@ export default function LoginForm() {
             </header>
         </div>
             <Section>
-                <Card className="m-4 mt-40" >
+                <Card className="m-4 mt-40 max-w-screen-md mx-auto" >
                     <CardHeader>
                         <CardTitle>Login</CardTitle>
                         <CardDescription>Enter your email and password to log in. <Link href="/signup" className="underline font-bold">Click here</Link> to create new account</CardDescription>

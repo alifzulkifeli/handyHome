@@ -109,7 +109,7 @@ export default function ProfilePage() {
     return (
         <>
             {user && (
-                <div className='p-2'>
+                <div className='p-2 max-w-screen-md mx-auto'>
                     <div className='fixed top-0 left-0 z-20 w-full bg-zinc-900 pt-safe'>
                         <header className='border-b bg-zinc-100 px-safe dark:border-zinc-800 dark:bg-zinc-900'>
                             <div className='mx-auto flex h-16 max-w-screen-md items-center justify-between px-6'>

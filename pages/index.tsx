@@ -126,7 +126,7 @@ const Index = () => {
                         </div>
                     ))
                 ) : (
-                    <div className="flex flex-col items-center justify-center pt-40 px-4">
+                    <div className="flex flex-col items-center justify-center pt-40 px-4 pb-20">
                     <div className="text-primary w-24 h-24 mb-8">
                         <List size={96} />
                     </div>
